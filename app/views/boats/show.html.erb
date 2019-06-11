@@ -3,9 +3,7 @@
 <p>Number of beds: <%= @boat.nbr_beds %></p>
 <p>Owner email: <%= @boat.owner.email %></p>
 <p>Description: <%= @boat.description %></p>
-<%= cl_image_tag(@boat.photo,
-    width: 400, height: 300, crop: :fill) %>
+<%= cl_image_tag @boat.photo, width: 400, height: 300, crop: :fill %>
 <br>
-<%= link_to "Delete boat", @boat.destroy %>
 
-
+<%= link_to "Sink the boat", boat_path(@boat) %>
