@@ -76,9 +76,9 @@ booking1 = Booking.new(start_date: Date.parse('24/10/2019'), end_date: Date.pars
 booking1.consumer = user_1
 booking1.boat = boat
 booking1.save!
+
 puts '4th boat...'
 url = "https://images.unsplash.com/photo-1542902980-8f2b7b1c2af3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80"
-
 boat = Boat.new(boat_name: 'Fishing boat', description: "Rent our fishing boat and go catch your own fresh fish in the morning.", nbr_beds: 2, day_price: 100, owner: user_3)
 boat.remote_photo_url = url
 boat.save!
@@ -98,7 +98,7 @@ booking1.save!
 
 puts '5th boat...'
 url = "https://robbreportedit.files.wordpress.com/2018/04/grand-craft-super-sport.jpg"
-picture = Boat.new(boat_name: 'Model-Craft', description: "Go exploring or be your very own taxi captain. This baby is likley to attract the business of people like George Clooney.", nbr_beds: 0, day_price: 90, owner: user_4)
+boat = Boat.new(boat_name: 'Model-Craft', description: "Go exploring or be your very own taxi captain. This baby is likley to attract the business of people like George Clooney.", nbr_beds: 0, day_price: 90, owner: user_4)
 boat.remote_photo_url = url
 boat.save!
 puts '...with bookings.'
