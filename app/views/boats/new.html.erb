@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Add new Boat</h1>
+
+  <%= simple_form_for [@boat] do |f| %>
+  <%= f.input :boat_name %>
+  <%= f.input :day_price %>
+  <%= f.input :nbr_beds %>
+  <%= f.input :description %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit "Add new boat", class: "btn btn-primary" %>
+  <% end %>
+</div>
+

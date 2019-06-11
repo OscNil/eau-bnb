@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_10_145347) do
+ActiveRecord::Schema.define(version: 2019_06_10_165150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 2019_06_10_145347) do
   create_table "boats", force: :cascade do |t|
     t.integer "day_price"
     t.string "boat_name"
-    t.string "boat_pic_url"
     t.integer "nbr_beds"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "owner_id"
+    t.string "photo"
     t.index ["owner_id"], name: "index_boats_on_owner_id"
   end
 
