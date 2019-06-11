@@ -1,0 +1,10 @@
+$soft-grey: #E5E4E5;
+
+.eau-form {
+  input::placeholder {
+    color: $soft-grey;
+  }
+  textarea::placeholder {
+    color: $soft-grey;
+  }
+}
