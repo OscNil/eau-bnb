@@ -1,8 +1,10 @@
 <h1>All Boats</h1>
 
 <%@boats.each do |boat|%>
+  <p>Boat name: <%= boat.boat_name %></p>
+  <p>Id: <%= boat.id %></p>
   <p><%= boat.photo %></p>
-  <p><%= boat.boat_name %></p>
-  <p><%= boat.day_price %></p>
-  <p><%= boat.description %></p>
+  <p>Price per day (£): <%= boat.day_price %></p>
+  <p>Description: <%= boat.description %></p>
+  <br><br>
 <% end %>
