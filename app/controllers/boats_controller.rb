@@ -14,8 +14,7 @@ class BoatsController < ApplicationController
 
   def create
     @boat = Boat.new(boat_params)
-    # CHANGE User.last!!!!!
-    @boat.owner = User.last
+    @boat.owner = current_user
     @boat.save
     if @boat.save
       redirect_to boat_path(@boat)

@@ -7,8 +7,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.boat = Boat.find(params[:boat_id])
-    # CHANGE User.last!!!!!
-    @booking.consumer = User.last
+    @booking.consumer = current_user
     @booking.save
     if @booking.save
       redirect_to boat_booking_path(@booking.boat, @booking)
