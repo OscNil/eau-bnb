@@ -1,5 +1,9 @@
 class BoatsController < ApplicationController
 
+  def index
+    @boats = Boat.all
+  end
+
   def show
     @boat = Boat.find(params[:id])
   end
@@ -18,6 +22,11 @@ class BoatsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @boat = Boat.find(params[:id])
+    @boat.destroy
   end
 
   private
