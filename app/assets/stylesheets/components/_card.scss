@@ -1,0 +1,13 @@
+.card {
+  &.boat-card {
+    box-shadow: 3px 3px 3px 0px rgba(5, 5, 5, .1);
+  }
+}
+.card-details {
+  margin-top: -15px;
+}
+
+.card-name {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 32px;
+}
