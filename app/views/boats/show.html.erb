@@ -10,6 +10,9 @@
       <p>Day price: <%= @boat.day_price %>€</p>
       <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
       <p>Owner email: <%= @boat.owner.email %></p>
+      <% if current_user.id == @boat.owner_id %>
+      <%= link_to "Sink the boat", boat_path(@boat), method: :delete %>
+      <% end %>
     </div>
   </div>
 </div>

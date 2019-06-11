@@ -1,0 +1,14 @@
+
+<div class="container">
+  <h3><%= @boat.boat_name %></h3>
+  <%= cl_image_tag(@boat.photo,
+      width: 400, height: 300, crop: :fill) %>
+
+  <h1>Add new Booking!</h1>
+
+  <%= simple_form_for [@boat, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit "Add new booking", class: "btn btn-primary" %>
+  <% end %>
+</div>
