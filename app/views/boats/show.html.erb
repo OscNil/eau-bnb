@@ -1,0 +1,9 @@
+<p>Name: <%= @boat.boat_name %></p>
+<p>Day price: <%= @boat.day_price %></p>
+<p>Number of beds: <%= @boat.nbr_beds %></p>
+<p>Owner email: <%= @boat.owner.email %></p>
+<p>Description: <%= @boat.description %></p>
+<%= cl_image_tag(@boat.photo,
+    width: 400, height: 300, crop: :fill) %>
+
+
