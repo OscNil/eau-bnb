@@ -5,5 +5,7 @@
 <p>Description: <%= @boat.description %></p>
 <%= cl_image_tag(@boat.photo,
     width: 400, height: 300, crop: :fill) %>
+<br>
+<%= link_to "Delete boat", @boat.destroy %>
 
 
