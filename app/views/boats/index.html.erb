@@ -1,10 +1,17 @@
-<h1>All Boats</h1>
+<h1>Eau BnB - Find a nice boat</h1>
+<div class="d-flex flex-wrap">
+  <%@boats.each do |boat|%>
+  <div class="card boat-card w-300 m-1">
+    <p><%= link_to (cl_image_tag boat.photo, width: 300, height: 200, crop: :fill), boat_path(boat) %></p>
+    <div class="card-details d-flex justify-content-between mr-2 ml-3">
+      <div class="card-name"><%= boat.boat_name %></div>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar card-avatar" %>
+      <div>
+        <%= boat.nbr_beds %> <i class="fas fa-bed"></i><br>
+        <%= boat.day_price %> €
+      </div>
+    </div>
+  </div>
 
-<%@boats.each do |boat|%>
-  <p>Boat name: <%= boat.boat_name %></p>
-  <p>Id: <%= boat.id %></p>
-  <p><%= boat.photo %></p>
-  <p>Price per day (£): <%= boat.day_price %></p>
-  <p>Description: <%= boat.description %></p>
-  <br><br>
-<% end %>
+  <% end %>
+</div>

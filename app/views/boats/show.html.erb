@@ -1,12 +1,29 @@
-<p>Name: <%= @boat.boat_name %></p>
-<p>Day price: <%= @boat.day_price %></p>
-<p>Number of beds: <%= @boat.nbr_beds %></p>
-<p>Owner email: <%= @boat.owner.email %></p>
-<p>Description: <%= @boat.description %></p>
-
-<%= cl_image_tag @boat.photo, width: 400, height: 300, crop: :fill %>
-<br>
-
-<% if current_user.id == @boat.owner_id %>
-<%= link_to "Sink the boat", boat_path(@boat), method: :delete %>
-<% end %>
+<div class="card">
+  <div class="show-boat-card d-flex justify-content-between">
+    <div class="show-left">
+      <%= cl_image_tag @boat.photo, width: 600, height: 350, crop: :fill %>
+    </div>
+    <% if !current_user || current_user.id != @boat.owner_id %>
+      <div class="show-right ml-3 mr-3">
+        <h1 class="boat-name"><%= @boat.boat_name %></h1>
+        <p>About: <%= @boat.description %></p>
+        <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
+        <p>Day price: <%= @boat.day_price %>€</p>
+        <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
+        <p>Owner email: <%= @boat.owner.email %></p>
+        <%= link_to "Book this boat", new_boat_booking_path(@boat), class: "btn btn-success" %>
+      </div>
+    <% elsif current_user.id == @boat.owner_id %>
+      <div class="show-right ml-3 mr-3">
+        <h1 class="boat-name"><%= @boat.boat_name %></h1>
+        <p>About: <%= @boat.description %></p>
+        <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
+        <p>Day price: <%= @boat.day_price %>€</p>
+        <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
+        <p>Owner email: <%= @boat.owner.email %></p>
+        <p>This boat belongs to you!</p>
+        <%= link_to "Sink the boat", boat_path(@boat), method: :delete, class: "btn btn-danger" %>
+      </div>
+    <% end %>
+  </div>
+</div>
