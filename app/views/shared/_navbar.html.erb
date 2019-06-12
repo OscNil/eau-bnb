@@ -27,9 +27,12 @@
           <%= link_to "My boats", '#', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <% @my_boats.each do |boat| %>
-            <%= link_to boat.boat_name, boat_path(boat) %><br>
+              <%= link_to boat.boat_name, boat_path(boat) %><br>
             <% end %>
           </div>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Received bookings", my_received_bookings_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Find a boat", boats_path, class: "nav-link" %>

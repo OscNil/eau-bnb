@@ -1,0 +1,12 @@
+<h1>A list of my received bookings</h1>
+
+<% @received_bookings.each do |booking| %>
+  <% booking.each do |b| %>
+    <p>Booking id: <%= b[:id] %>
+    <br>
+    <p>From: <%= b[:start_date]%></p>
+    <p>To: <%= b[:end_date] %></p>
+    <br>
+    <br>
+    <% end %>
+<% end %>
