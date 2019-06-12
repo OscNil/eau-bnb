@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.consumer = current_user
     @booking.save
     if @booking.save
-      redirect_to boat_booking_path(@booking.boat, @booking)
+      redirect_to boat_path(@booking.boat)
     else
       render :new
     end
