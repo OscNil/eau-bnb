@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="d-flex justify-content-between">
+  <div class="show-boat-card d-flex justify-content-between">
     <div class="show-left">
       <%= cl_image_tag @boat.photo, width: 600, height: 350, crop: :fill %>
     </div>
@@ -11,7 +11,10 @@
       <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
       <p>Owner email: <%= @boat.owner.email %></p>
       <% if current_user.id == @boat.owner_id %>
-      <%= link_to "Sink the boat", boat_path(@boat), method: :delete %>
+        <p>This boat belongs to you!</p>
+        <%= link_to "Sink the boat", boat_path(@boat), method: :delete, class: "btn btn-danger" %>
+      <% else %>
+        <%= link_to "Book this boat", new_boat_booking_path(@boat), class: "btn btn-success" %>
       <% end %>
     </div>
   </div>
