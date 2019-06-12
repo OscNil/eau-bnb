@@ -1,0 +1,7 @@
+ <div class="banner">
+      <div class="container">
+        <h1>My bookings:</h1>
+        <% @my_bookings.order(:start_date).each do |b| %>
+          <p><%= b.start_date  %> -- <%= b.end_date %>&nbsp&nbsp: <%= link_to b.boat.boat_name, boat_path(b.boat) %></p>
+        <% end %>
+      </div>
