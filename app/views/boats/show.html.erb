@@ -3,16 +3,26 @@
     <div class="show-left">
       <%= cl_image_tag @boat.photo, width: 600, height: 350, crop: :fill %>
     </div>
-    <div class="show-right ml-3 mr-3">
-      <h1 class="boat-name"><%= @boat.boat_name %></h1>
-      <p>About: <%= @boat.description %></p>
-      <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
-      <p>Day price: <%= @boat.day_price %>€</p>
-      <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
-      <p>Owner email: <%= @boat.owner.email %></p>
-      <% if current_user.id == @boat.owner_id %>
-      <%= link_to "Sink the boat", boat_path(@boat), method: :delete %>
+      <% if !current_user || current_user.id != @boat.owner_id %>
+        <div class="show-right ml-3 mr-3">
+          <h1 class="boat-name"><%= @boat.boat_name %></h1>
+          <p>About: <%= @boat.description %></p>
+          <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
+          <p>Day price: <%= @boat.day_price %>€</p>
+          <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
+          <p>Owner email: <%= @boat.owner.email %></p>
+        </div>
+        <% elsif current_user.id == @boat.owner_id %>
+          <div class="show-right ml-3 mr-3">
+            <h1 class="boat-name"><%= @boat.boat_name %></h1>
+            <p>About: <%= @boat.description %></p>
+            <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
+            <p>Day price: <%= @boat.day_price %>€</p>
+            <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
+            <p>Owner email: <%= @boat.owner.email %></p>
+            <%= link_to "Sink the boat", boat_path(@boat), method: :delete %>
+          </div>
       <% end %>
-    </div>
+
   </div>
 </div>
