@@ -1,8 +1,12 @@
 import "bootstrap";
 
-$(document).ready(() => {
-  $('#mybanner').hide();
-  $('#my-bookings').click(()=>{
-    $('#mybanner').toggle();
-  });
+// $(document).ready(() => {
+//   $('#my-bookings').click(()=>{
+//     $('#mybanner').toggle('slow');
+//   });
+// });
+
+$('#mybanner').hide();
+$('#my-bookings').click(() => {
+  $('#mybanner').slideToggle("slow");
 });
