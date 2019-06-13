@@ -3,26 +3,23 @@
 <div class="d-flex flex-column">
   <% @received_bookings.each do |booking| %>
     <% booking.each do |b| %>
-    <div class="container rec-bookings">
-      <div class="p-2"><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar card-avatar" %></div>
-      <div class="p-2">Booking id: <%= b.id %></div>
-      <div class="p-2">From: <%= b.start_date%> - To: <%= b.end_date %></div>
+    <div class="card boat-card w-300 m-1 d-flex rec-bookings">
+    <div id="my-boats-booking-card">
+      <div class="d-flex test">
+        <div class="card-avatar"><%= image_tag b.consumer.user_pic_url, class: "avatar card-avatar"%></div>
+        <div class="p-2">Booked by: <%= b.consumer.email %></div>
+      </div>
+
+      <div>
+        <div class="p-2">Boat name: <%= b.boat.boat_name %></div>
+        <div class="p-2">From: <%= b.start_date%> - To: <%= b.end_date %></div>
+      </div><p></p>
+
+      <img class="my-boats-booking-img" src="<%= b.boat.photo %>" alt="<%= b.boat.boat_name %>" height="100px">
     </div>
-    <div class="container rec-bookings">
-      <div class="p-2">Consumer email: <%= b.consumer.email %></div>
-      <div class="p-2">Boat name: <%= b.boat.boat_name %></div>
+
+
     </div>
     <% end %>
   <% end %>
 </div>
-
-<% @received_bookings.each do |booking| %>
-  <% booking.each do |b| %>
-    <p>Booking id: <%= b[:id] %>
-    <br>
-    <p>From: <%= b[:start_date]%></p>
-    <p>To: <%= b[:end_date] %></p>
-    <br>
-    <br>
-    <% end %>
-<% end %>
