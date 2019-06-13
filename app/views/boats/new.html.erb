@@ -3,9 +3,11 @@
 <br>
 
 <%= simple_form_for @boat, html: {class: "eau-form"} do |f|  %>
-<%= f.input :boat_name, :label => "The Name of the Boat", :placeholder => "MS Sister Mary Frances III of the Dalmatian sea" %>
-<%= f.input :day_price, :label => "Price per day (in euros, €)", :placeholder => "€ 200" %>
-<%= f.input :nbr_beds, :label => "Number of bunks", :placeholder => "65" %>
+<div class="d-flex">
+  <%= f.input :boat_name, :label => "The Name of the Boat", :placeholder => "MS Sister Mary Frances III", class: "form-input" %>
+  <%= f.input :day_price, :label => "Price per day (in euros, €)", :placeholder => "€ 200", class: "form-input" %>
+  <%= f.input :nbr_beds, :label => "Number of bunks", :placeholder => "65", class: "form-input" %>
+</div>
 <%= f.input :description, :placeholder => "This fabulous steam machine was first launched in the Sussex harbor back in 1899. I has a crew of 16 people including 2 chefs. Top speed: 2.8 knots." %>
 <%= f.input :photo %>
 <%= f.input :photo_cache, as: :hidden %>
