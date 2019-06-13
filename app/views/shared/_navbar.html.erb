@@ -15,6 +15,9 @@
       <% if user_signed_in? %>
       <!-- input by OscNil -->
         <li class="nav-item">
+          <%= link_to "Find a boat", boats_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "My bookings", "#", class: "nav-link", id: "my-bookings" %>
         </li>
         <li class="nav-item">
@@ -32,9 +35,6 @@
         </li>
         <li class="nav-item">
           <%= link_to "Received bookings", my_received_bookings_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Find a boat", boats_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag current_user.user_pic_url, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
