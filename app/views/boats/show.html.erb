@@ -4,58 +4,64 @@
       <%= cl_image_tag @boat.photo, width: 600, height: 350, crop: :fill %>
     </div>
     <% if !current_user || current_user.id != @boat.owner_id %>
-      <div class="show-right ml-3 mr-3">
-        <div class="d-flex justify-content-between">
-          <div>
-        <h1 class="boat-name"><%= @boat.boat_name %></h1>
-          </div>
-          <div>
-            <p><%= image_tag @boat.owner.user_pic_url, class: "card-avatar", id: "avatar-large" %></p>
-          </div>
+    <div class="show-right ml-3 mr-3">
+      <div class="d-flex justify-content-between">
+        <div>
+          <h1 class="boat-name"><%= @boat.boat_name %></h1>
         </div>
-        <p><%= @boat.description %></p>
-            <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
-            <p>Day price: <%= @boat.day_price %>€</p>
-            <p>Owner email: <%= @boat.owner.email %></p>
-
-        <%= simple_form_for [@boat, @booking] do |f| %>
-          <div class="form-wrapper">
-            <%= f.input :start_date, as: :string, required: false, input_html: {id: "range_start"} %>
-            <%= f.input :end_date, as: :string, required: false, input_html: {id: "range_end"}  %>
-            <%= f.submit "Add new booking", class: "btn booking-button btn-eau" %>
-          </div>
-        <% end %>
-
+        <div>
+          <p><%= image_tag @boat.owner.user_pic_url, class: "card-avatar", id: "avatar-large" %></p>
+        </div>
       </div>
+      <p><%= @boat.description %></p>
+      <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
+      <p>Day price: <%= @boat.day_price %>€</p>
+      <p>Owner email: <%= @boat.owner.email %></p>
+
+      <%= simple_form_for [@boat, @booking] do |f| %>
+      <div class="form-wrapper">
+        <%= f.input :start_date, as: :string, required: false, input_html: {id: "range_start"} %>
+        <%= f.input :end_date, as: :string, required: false, input_html: {id: "range_end"}  %>
+        <%= f.submit "Add new booking", class: "btn booking-button btn-eau" %>
+      </div>
+      <% end %>
+
+    </div>
 
     <% elsif current_user.id == @boat.owner_id %>
-      <div class="show-right ml-3 mr-3">
-        <h1 class="boat-name"><%= @boat.boat_name %></h1>
-        <p><%= @boat.description %></p>
-        <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
-        <p>Day price: <%= @boat.day_price %>€</p>
-        <p><%= image_tag @boat.owner.user_pic_url, class: "avatar-large card-avatar" %></p>
-        <p>Owner email: <%= @boat.owner.email %></p>
-        <p><strong>This boat belongs to you!</strong></p>
-        <%= link_to "Sink the boat", boat_path(@boat), method: :delete, class: "btn btn-danger" %>
+    <div class="show-right ml-3 mr-3">
+      <div class="d-flex justify-content-between">
+        <div>
+          <h1 class="boat-name"><%= @boat.boat_name %></h1>
+        </div>
+        <div>
+          <p><%= image_tag @boat.owner.user_pic_url, class: "card-avatar", id: "avatar-large" %></p>
+        </div>
       </div>
+      <p><%= @boat.description %></p>
+      <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
+      <p>Day price: <%= @boat.day_price %>€</p>
+      <p>Owner email: <%= @boat.owner.email %></p>
+      <p><strong>This boat belongs to you!</strong></p>
+      <%= link_to "Sink the boat", boat_path(@boat), method: :delete, class: "btn btn-danger" %>
+    </div>
     <% end %>
   </div>
 </div>
 <% if !current_user || current_user.id != @boat.owner_id %>
 
-  <% unless @myboatbookings.empty? %>
-    <div class="card booking-card">
-      <div class="d-flex">
-        <div class="show-right ml-3 mr-3">
-          <h3>My bookings:</h3>
-          <ul>
-            <% @myboatbookings.each do |booking| %>
-              <li><%= booking.start_date %> -- <%= booking.end_date %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+<% unless @myboatbookings.empty? %>
+<div class="card booking-card">
+  <div class="d-flex">
+    <div class="show-right ml-3 mr-3">
+      <h3>My bookings:</h3>
+      <ul>
+        <% @myboatbookings.each do |booking| %>
+        <li><%= booking.start_date %> -- <%= booking.end_date %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
 
     <% end %>
   </div>
