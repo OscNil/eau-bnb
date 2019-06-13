@@ -27,29 +27,32 @@
     <% elsif current_user.id == @boat.owner_id %>
       <div class="show-right ml-3 mr-3">
         <h1 class="boat-name"><%= @boat.boat_name %></h1>
-        <p>About: <%= @boat.description %></p>
+        <p><%= @boat.description %></p>
         <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
         <p>Day price: <%= @boat.day_price %>€</p>
         <p><%= image_tag @boat.owner.user_pic_url, class: "avatar-large card-avatar" %></p>
         <p>Owner email: <%= @boat.owner.email %></p>
-        <p>This boat belongs to you!</p>
+        <p><strong>This boat belongs to you!</strong></p>
         <%= link_to "Sink the boat", boat_path(@boat), method: :delete, class: "btn btn-danger" %>
       </div>
     <% end %>
   </div>
 </div>
-<br>
-<div class="card">
-  <div class="d-flex justify-content-between">
-    <% if !current_user || current_user.id != @boat.owner_id %>
-      <div class="show-right ml-3 mr-3">
-        <h3>My bookings:</h3>
-        <ul>
-          <% @myboatbookings.each do |booking| %>
-            <li><%= booking.start_date %> -- <%= booking.end_date %></li>
-          <% end %>
-        </ul>
-      </div>
+<% if !current_user || current_user.id != @boat.owner_id %>
+
+  <% unless @myboatbookings.empty? %>
+    <div class="card booking-card">
+      <div class="d-flex">
+        <div class="show-right ml-3 mr-3">
+          <h3>My bookings:</h3>
+          <ul>
+            <% @myboatbookings.each do |booking| %>
+              <li><%= booking.start_date %> -- <%= booking.end_date %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
     <% end %>
   </div>
 </div>

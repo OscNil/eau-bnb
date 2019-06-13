@@ -1,7 +1,7 @@
-<h1>Boats for rent</h1>
+<h1>Boats for rent in your region</h1>
 <div class="div-scroller d-flex flex-wrap">
   <%@boats.each do |boat|%>
-  <div class="card boat-card w-300 m-1">
+  <div class="card boat-card w-300">
     <p><%= link_to (cl_image_tag boat.photo, width: 300, height: 200, crop: :fill), boat_path(boat) %></p>
     <div class="card-details d-flex justify-content-between mr-2 ml-3">
       <div class="card-name">
