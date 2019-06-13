@@ -1,5 +1,5 @@
-<h1>Eau BnB - Find a nice boat</h1>
-<div class="d-flex flex-wrap">
+<h1>Boats for rent</h1>
+<div class="div-scroller d-flex flex-wrap">
   <%@boats.each do |boat|%>
   <div class="card boat-card w-300 m-1">
     <p><%= link_to (cl_image_tag boat.photo, width: 300, height: 200, crop: :fill), boat_path(boat) %></p>

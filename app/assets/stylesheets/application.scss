@@ -18,4 +18,11 @@ body {
 
 h1 {
   color: $eau-blue;
+  font-family: 'Cinzel';
+  // font-weight: bold;
+}
+
+.div-scroller {
+  overflow-y: auto;
+  height: 700px;
 }
