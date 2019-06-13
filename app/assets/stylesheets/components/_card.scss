@@ -1,6 +1,11 @@
 .card {
   &.boat-card {
     box-shadow: 3px 3px 3px 0px rgba(5, 5, 5, .1);
+    margin: 1.2rem;
+    border-radius: 0px 0px 20px 20px;
+  }
+  &.booking-card {
+    border-radius: 0px 0px 20px 20px;
   }
 }
 .card-details {

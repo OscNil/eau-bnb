@@ -48,7 +48,7 @@ booking1.boat = boat
 booking1.save!
 puts '2nd boat...'
 url = "https://images.unsplash.com/photo-1543226589-72c4686b9cd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-boat = Boat.new(boat_name: 'BA 64', description: "Older boat with a lot of charm. Might need some love.", nbr_beds: 40, day_price: 150, owner: user_1)
+boat = Boat.new(boat_name: 'BA 64', description: "Older boat with a lot of charm. Might need some love, but love given is love received. Consider all the poor souls out there with no love... makes you think, huh?", nbr_beds: 40, day_price: 150, owner: user_1)
 boat.remote_photo_url = url
 boat.save!
 puts '...with bookings.'
@@ -142,7 +142,7 @@ booking1.save!
 
 puts '7th boat...'
 url = "https://img-new.cgtrader.com/items/837835/5fd0e3f394/venetian-gondola-3d-model-max.jpg"
-boat = Boat.new(boat_name: 'Gondola', description: "For those romantic trips. Oarsman not included.", nbr_beds: 0, day_price: 10, owner: user_5)
+boat = Boat.new(boat_name: 'Gondola', description: "For those romantic trips. Oarsman not included, he wouldn't work with me no more, said his wife got a job in Oman, good luck finding an oarsman's gig there!", nbr_beds: 0, day_price: 10, owner: user_5)
 boat.remote_photo_url = url
 boat.save!
 puts '...with bookings.'
@@ -163,7 +163,7 @@ booking1.save!
 
 puts '8th boat...'
 url = "https://images.unsplash.com/photo-1540946485063-a40da27545f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-boat = Boat.new(boat_name: 'Sailboat', description: "Rent our lovely boat to go sailing.", nbr_beds: 2, day_price: 10, owner: user_3)
+boat = Boat.new(boat_name: 'Sailboat', description: "Rent our lovely boat to go sailing. Sailing requires wind, predicting wind requires meteorological skills, I wish there was an app for that! Am I right, ladies? And, well, gents?", nbr_beds: 2, day_price: 10, owner: user_3)
 boat.remote_photo_url = url
 boat.save!
 
@@ -177,14 +177,14 @@ boat.save!
 
 puts '10th boat...'
 url = "https://images.unsplash.com/photo-1558482877-26430d09215e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80"
-boat = Boat.new(boat_name: 'SoNice', description: "Rent our very nice sailboat.", nbr_beds: 2, day_price: 10, owner: user_2)
+boat = Boat.new(boat_name: 'SoNice', description: "Rent our very nice yacht. Nevermind that flag, we have plenty of varieties, European, Polynesian, you name it!", nbr_beds: 2, day_price: 10, owner: user_2)
 boat.remote_photo_url = url
 boat.save!
 
 
 puts '11th boat...'
 url = "https://images.unsplash.com/photo-1527431293370-0cd188ca5d15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
-boat = Boat.new(boat_name: 'Sailboat', description: "Rent our very nice sailboat.", nbr_beds: 4, day_price: 10, owner: user_3)
+boat = Boat.new(boat_name: 'Sailboat', description: "Rent our very nice sailboat. We named it Sailboat because, well you get it, and you pay for those stickers by the letter. Anyway, it's for sailing.", nbr_beds: 4, day_price: 10, owner: user_3)
 boat.remote_photo_url = url
 boat.save!
 
@@ -196,31 +196,32 @@ boat.save!
 
 puts '13th boat...'
 url = "https://images.unsplash.com/photo-1545992311-cee340fc6011?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1060&q=80"
-boat = Boat.new(boat_name: 'Clipper', description: "Clipper for rent!", nbr_beds: 2, day_price: 10, owner: user_3)
+boat = Boat.new(boat_name: 'Clipper', description: "Avast yee! Skurvey not included! What is dead may never die! Land lubbers beware! Salt and crackers for everyone!", nbr_beds: 2, day_price: 10, owner: user_3)
 boat.remote_photo_url = url
 boat.save!
 
 puts '14th boat...'
 url = "https://images.unsplash.com/photo-1504512318810-43062e38329b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-boat = Boat.new(boat_name: 'MonaLisa', description: "Charming boat for hot summer sails.", nbr_beds: 2, day_price: 10, owner: user_5)
+boat = Boat.new(boat_name: 'MonaLisa', description: "Charming boat for hot summer sailing. Sun screen people!!! Trust me on the sun screen.", nbr_beds: 2, day_price: 10, owner: user_5)
 boat.remote_photo_url = url
 boat.save!
 
 puts '15th boat...'
 url = "https://images.unsplash.com/photo-1540660931770-fa5a249c7614?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2091&q=80"
-boat = Boat.new(boat_name: 'PM-1-500', description: "Go sailing in our lovely boat for rent.", nbr_beds: 4, day_price: 15, owner: user_1)
+boat = Boat.new(boat_name: 'PM-1-500', description: "Go sailing in our lovely boat for rent. There is no shame in renting, you would rent a movie wouldn't you? So why not our boat?", nbr_beds: 4, day_price: 15, owner: user_1)
 boat.remote_photo_url = url
 boat.save!
 
 puts '16th boat...'
 url = "https://images.unsplash.com/photo-1515471216966-c8521f081224?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80"
-boat = Boat.new(boat_name: 'NightHawk', description: "Fore those lovely evening sails.", nbr_beds: 2, day_price: 10, owner: user_2)
+boat = Boat.new(boat_name: 'NightHawk', description: "Fore those lovely evening voyages. Comme ci comme ça, bonjour, panaeu, le chevalle parle!", nbr_beds: 2, day_price: 10, owner: user_2)
 boat.remote_photo_url = url
 boat.save!
 
 puts '17th boat...'
 url = "https://images.unsplash.com/photo-1535024966840-e7424dc2635b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80"
-boat = Boat.new(boat_name: 'Yacht', description: "Win the race in our great sailboat.", nbr_beds: 4, day_price: 20, owner: user_3)
+boat = Boat.new(boat_name: 'Yacht', description: "Win the race in our great sailboat. And when we say race, we literally mean any race, caucasian, polynesian, you name it! ", nbr_beds: 4, day_price: 20, owner: user_3)
 boat.remote_photo_url = url
 boat.save!
 puts 'Finished!'
+

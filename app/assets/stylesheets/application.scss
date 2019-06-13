@@ -13,7 +13,13 @@
 @import "pages/index";
 
 body {
-  background-color: $eau-light-blue;
+  background-color: white;
+}
+
+.container {
+  // background-color: $eau-yellow;
+  // border: 1px solid black;
+  // border-radius: 5px;
 }
 
 h1 {
@@ -25,4 +31,5 @@ h1 {
 .div-scroller {
   overflow-y: auto;
   height: 700px;
+  justify-content: center;
 }
