@@ -1,0 +1,16 @@
+.rec-bookings {
+  display: flex;
+
+}
+
+#my-boats-booking-card {
+  position: relative;
+  .my-boats-booking-img {
+    position: absolute;
+    top: 5px;
+    right: 18px;
+    height: 118px;
+  }
+  margin-left: 15px;
+  margin-top: 15px;
+}
