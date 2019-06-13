@@ -10,7 +10,6 @@ class BookingsController < ApplicationController
     @booking.boat = Boat.find(params[:boat_id])
     @booking.consumer = current_user
     if @booking.save
-      alert.now
       redirect_to boat_path(@booking.boat), alert: "You can't book your own boat!"
     else
       render "boats/show"
