@@ -5,12 +5,18 @@
     </div>
     <% if !current_user || current_user.id != @boat.owner_id %>
       <div class="show-right ml-3 mr-3">
+        <div class="d-flex justify-content-between">
+          <div>
         <h1 class="boat-name"><%= @boat.boat_name %></h1>
-        <p>About: <%= @boat.description %></p>
-        <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
-        <p>Day price: <%= @boat.day_price %>€</p>
-        <p><%= image_tag @boat.owner.user_pic_url, class: "avatar-large card-avatar" %></p>
-        <p>Owner email: <%= @boat.owner.email %></p>
+          </div>
+          <div>
+            <p><%= image_tag @boat.owner.user_pic_url, class: "card-avatar", id: "avatar-large" %></p>
+          </div>
+        </div>
+        <p><%= @boat.description %></p>
+            <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
+            <p>Day price: <%= @boat.day_price %>€</p>
+            <p>Owner email: <%= @boat.owner.email %></p>
 
         <%= simple_form_for [@boat, @booking] do |f| %>
           <div class="form-wrapper">
