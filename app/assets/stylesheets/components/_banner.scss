@@ -1,27 +1,28 @@
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.5)), asset-url("bookings.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255,0.7),rgba(255, 255, 255,0.9)), asset-url("bookings.jpg");
   background-size: cover;
   background-position: center;
   // transition: 1s ease;
   // padding: 150px 0;
   h1 {
     margin: 0;
-    color: white;
+    color: $eau-blue;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 32px;
     font-weight: bold;
   }
   p {
   font-size: 20px;
-  color: white;
+  color: black;
   // opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
   a {
-    color: $eau-semi-blue;
+    color: $eau-blue;
     &:hover {
       text-decoration: none;
-      color: $eau-light-blue;
+      color: $black;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       // font-family: 'Pinyon Script', cursive;
       // font-size: 20px;
       // line-height: 1.5;
