@@ -15,10 +15,16 @@ User.destroy_all
 
 puts 'Creating users...'
 
-user_1 = User.create!(password: '123456', email: 'petra_elandersson@yahoo.com')
-user_2 = User.create!(password: '123456', email: 'depersson81@gmail.com')
-user_3 = User.create!(password: '123456', email: 'nigrell@gmail.com')
-user_4 = User.create!(password: '123456', email: 'oscarnilestam@gmail.com')
+user_1 = User.create!(password: '123456', email: 'petra_elandersson@yahoo.com',
+                      user_pic_url: 'https://kitt.lewagon.com/placeholder/users/pzyee')
+user_2 = User.create!(password: '123456', email: 'depersson81@gmail.com',
+                      user_pic_url: 'https://kitt.lewagon.com/placeholder/users/depersson')
+user_3 = User.create!(password: '123456', email: 'nigrell@gmail.com',
+                      user_pic_url: 'https://kitt.lewagon.com/placeholder/users/leniglnn')
+user_4 = User.create!(password: '123456', email: 'oscarnilestam@gmail.com',
+                      user_pic_url: 'https://kitt.lewagon.com/placeholder/users/oscnil')
+user_5 = User.create!(password: '123456', email: 'atmosfeer@gmail.com',
+                      user_pic_url: 'https://kitt.lewagon.com/placeholder/users/atmosfeer')
 
 puts 'Creating boats...'
 
@@ -117,7 +123,7 @@ booking1.save!
 
 puts '6th boat...'
 url = "https://images.bvimedia.ca/vehicles/photos/08/97/089716_2018_regal_Deck_Boats_24_Fasdeck_RX.jpg?640x400"
-boat = Boat.new(boat_name: 'Boston Whaler', description: "The Boston Whaler CF 8449 RX. A quick and fun boat for short outings.", nbr_beds: 0, day_price: 60, owner: user_4)
+boat = Boat.new(boat_name: 'Boston Whaler', description: "The Boston Whaler CF 8449 RX. A quick and fun boat for short outings.", nbr_beds: 0, day_price: 60, owner: user_5)
 boat.remote_photo_url = url
 boat.save!
 puts '...with bookings.'
@@ -136,7 +142,7 @@ booking1.save!
 
 puts '7th boat...'
 url = "https://img-new.cgtrader.com/items/837835/5fd0e3f394/venetian-gondola-3d-model-max.jpg"
-boat = Boat.new(boat_name: 'Gondola', description: "For those romantic trips. Oarsman not included.", nbr_beds: 0, day_price: 10, owner: user_4)
+boat = Boat.new(boat_name: 'Gondola', description: "For those romantic trips. Oarsman not included.", nbr_beds: 0, day_price: 10, owner: user_5)
 boat.remote_photo_url = url
 boat.save!
 puts '...with bookings.'
@@ -184,7 +190,7 @@ boat.save!
 
 puts '12th boat...'
 url = "https://images.unsplash.com/photo-1526369956368-fead97fe0f28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80"
-boat = Boat.new(boat_name: 'Raw Hide', description: "Our Raw Hide is a great boat that you won't be dissapointed in.", nbr_beds: 2, day_price: 10, owner: user_2)
+boat = Boat.new(boat_name: 'Raw Hide', description: "Our Raw Hide is a great boat that you won't be dissapointed in.", nbr_beds: 2, day_price: 10, owner: user_5)
 boat.remote_photo_url = url
 boat.save!
 
@@ -196,7 +202,7 @@ boat.save!
 
 puts '14th boat...'
 url = "https://images.unsplash.com/photo-1504512318810-43062e38329b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-boat = Boat.new(boat_name: 'MonaLisa', description: "Charming boat for hot summer sails.", nbr_beds: 2, day_price: 10, owner: user_4)
+boat = Boat.new(boat_name: 'MonaLisa', description: "Charming boat for hot summer sails.", nbr_beds: 2, day_price: 10, owner: user_5)
 boat.remote_photo_url = url
 boat.save!
 
