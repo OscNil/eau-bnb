@@ -1,15 +1,15 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
+  padding: 0px;
+  .navbar-collapse {
   flex-grow: 0;
-}
+  }
+  .navbar-brand img {
+    height: 60px;
+    padding: -10px;
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-  // border-radius: 50%;
+  }
 }
 
 #navbarDropdown {
@@ -17,4 +17,8 @@
   &:hover {
     color: rgba(0, 0, 0, 0.7);
   }
+}
+
+#brand {
+  text-align: left;
 }
