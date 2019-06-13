@@ -11,3 +11,10 @@
   width: 40px;
   // border-radius: 50%;
 }
+
+#navbarDropdown {
+  color: rgba(0, 0, 0, 0.5);
+  &:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
