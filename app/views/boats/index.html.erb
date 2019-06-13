@@ -4,11 +4,15 @@
   <div class="card boat-card w-300 m-1">
     <p><%= link_to (cl_image_tag boat.photo, width: 300, height: 200, crop: :fill), boat_path(boat) %></p>
     <div class="card-details d-flex justify-content-between mr-2 ml-3">
-      <div class="card-name"><%= boat.boat_name %></div>
-      <%= image_tag boat.owner.user_pic_url, class: "avatar card-avatar" %>
-      <div>
-        <%= boat.nbr_beds %> <i class="fas fa-bed"></i><br>
-        <%= boat.day_price %> €
+      <div class="card-name">
+        <%= boat.boat_name %>
+      </div>
+      <div class="card-avatar">
+        <%= image_tag boat.owner.user_pic_url, class: "avatar card-avatar"%><br>
+        <div class="card-info">
+          <%= boat.nbr_beds %> <i class="fas fa-bed"></i><br>
+          <%= boat.day_price %> €
+        </div>
       </div>
     </div>
   </div>
