@@ -7,6 +7,11 @@
   &.booking-card {
     border-radius: 0px 0px 20px 20px;
   }
+  &.rent_out {
+    margin: 1.2rem;
+    border-radius: 0px 0px 20px 20px;
+    padding: 25px;
+  }
 }
 .card-details {
   margin-top: -15px;
@@ -34,5 +39,9 @@
   margin-left: 5px;
   margin-bottom: 10px;
 }
-
-
+.save_part {
+  justify-content: space-between;
+}
+.new_boat_submit_button {
+  margin-top: 28px;
+}

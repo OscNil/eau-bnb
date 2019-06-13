@@ -1,16 +1,35 @@
+<div class="card rent_out">
+
 <h1>Rent out your boat</h1>
 <h6>Please take your time to describe your vessel. Have a think about what type of person will be reading this description. Will they understand your wording? Maybe you should try showing it to someone else and get their feedback.</h6>
 <br>
 
 <%= simple_form_for @boat, html: {class: "eau-form"} do |f|  %>
 <div class="d-flex">
-  <%= f.input :boat_name, :label => "The Name of the Boat", :placeholder => "MS Sister Mary Frances III", class: "form-input" %>
-  <%= f.input :day_price, :label => "Price per day (in euros, €)", :placeholder => "€ 200", class: "form-input" %>
-  <%= f.input :nbr_beds, :label => "Number of bunks", :placeholder => "65", class: "form-input" %>
+  <div class="row">
+  <div class="col">
+    <%= f.input :boat_name, :label => "The Name of the Boat", :placeholder => "MS Sister Mary Frances III", class: "form-input" %>
+  </div>
+  <div class="col">
+    <%= f.input :day_price, :label => "Price per day (in euros, €)", :placeholder => "€ 200", class: "form-input" %>
+  </div>
+  <div class="col">
+    <%= f.input :nbr_beds, :label => "Number of bunks", :placeholder => "65", class: "form-input" %>
+  </div>
+</div>
 </div>
 <%= f.input :description, :placeholder => "This fabulous steam machine was first launched in the Sussex harbor back in 1899. I has a crew of 16 people including 2 chefs. Top speed: 2.8 knots." %>
-<%= f.input :photo %>
-<%= f.input :photo_cache, as: :hidden %>
-<%= f.submit "Add new boat", class: "btn btn-eau" %>
-<% end %></div>
+
+<div class="d-flex save_part">
+  <div>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </div>
+  <div id="save_end">
+    <%= f.submit "Add new boat", class: "btn btn-primary new_boat_submit_button" %>
+  </div>
+</div>
+<% end %>
+</div>
+</div>
 
