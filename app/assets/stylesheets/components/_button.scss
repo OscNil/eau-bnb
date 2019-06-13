@@ -3,6 +3,15 @@
   background-color: $eau-blue;
   &:hover {
     color: $eau-blue;
-    background-color: $eau-semi-blue
+    background-color: $eau-semi-blue;
+  }
+}
+
+.btn-additional {
+  color: $eau-blue;
+  background-color: $eau-semi-blue;
+  &:hover {
+    color: white;
+    background-color: $eau-blue;
   }
 }
