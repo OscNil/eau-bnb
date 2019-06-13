@@ -1,5 +1,21 @@
 <h1>A list of my received bookings</h1>
 
+<div class="d-flex flex-column">
+  <% @received_bookings.each do |booking| %>
+    <% booking.each do |b| %>
+    <div class="container rec-bookings">
+      <div class="p-2"><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar card-avatar" %></div>
+      <div class="p-2">Booking id: <%= b.id %></div>
+      <div class="p-2">From: <%= b.start_date%> - To: <%= b.end_date %></div>
+    </div>
+    <div class="container rec-bookings">
+      <div class="p-2">Consumer email: <%= b.consumer.email %></div>
+      <div class="p-2">Boat name: <%= b.boat.boat_name %></div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+
 <% @received_bookings.each do |booking| %>
   <% booking.each do |b| %>
     <p>Booking id: <%= b[:id] %>
