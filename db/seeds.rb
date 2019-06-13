@@ -213,7 +213,7 @@ boat.remote_photo_url = url
 boat.save!
 
 puts '17th boat...'
-url = ""
+url = "https://images.unsplash.com/photo-1535024966840-e7424dc2635b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=333&q=80"
 boat = Boat.new(boat_name: 'Yacht', description: "Win the race in our great sailboat.", nbr_beds: 4, day_price: 20, owner: user_3)
 boat.remote_photo_url = url
 boat.save!
