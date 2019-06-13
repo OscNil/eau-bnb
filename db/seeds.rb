@@ -184,7 +184,7 @@ boat.save!
 
 puts '11th boat...'
 url = "https://images.unsplash.com/photo-1527431293370-0cd188ca5d15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
-boat = Boat.new(boat_name: 'Sailboat', description: "Rent our very nice sailboat. We named it Sailboat because, well you get it, and you pay for those stickers by the letter. Anyway, it's for sailing.", nbr_beds: 4, day_price: 10, owner: user_3)
+boat = Boat.new(boat_name: 'Kristin', description: "Rent our very nice sailboat. We named it Sailboat because, well you get it, and you pay for those stickers by the letter. Anyway, it's for sailing.", nbr_beds: 4, day_price: 10, owner: user_3)
 boat.remote_photo_url = url
 boat.save!
 
