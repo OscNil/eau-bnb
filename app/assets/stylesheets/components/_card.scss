@@ -11,8 +11,21 @@
   font-family: 'Pinyon Script', cursive;
   font-size: 32px;
   color: $eau-blue;
+  margin-top: 10px;
 }
 
 .show-boat-card {
   margin-bottom: 1rem;
+}
+
+.card-avatar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.card-info {
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
