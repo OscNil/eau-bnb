@@ -1,0 +1,8 @@
+.btn-eau {
+  color: white;
+  background-color: $eau-blue;
+  &:hover {
+    color: $eau-blue;
+    background-color: $eau-semi-blue
+  }
+}
