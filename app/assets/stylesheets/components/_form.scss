@@ -1,11 +1,9 @@
-$soft-grey: #E5E4E5;
-
 .eau-form {
   input::placeholder {
-    color: $soft-grey;
+    color: $eau-grey;
   }
   textarea::placeholder {
-    color: $soft-grey;
+    color: $eau-grey;
   }
 }
 
@@ -22,4 +20,8 @@ $soft-grey: #E5E4E5;
   display: inline-block;
   flex-grow: 1;
   margin-top: -3px;
+}
+
+.form-input {
+  margin-right: 10rem;
 }
