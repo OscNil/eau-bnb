@@ -1,12 +1,9 @@
 class BookingsController < ApplicationController
-  def new
-    @boat = Boat.find(params[:boat_id])
-    @booking = Booking.new
-    if @boat.owner == current_user
-      flash[:notice] = "You can't book your own boat!."
-      redirect_to boat_path(@boat)
-    end
-  end
+
+    # if @boat.owner == current_user
+    #   flash[:notice] = "You can't book your own boat!."
+    #   redirect_to boat_path(@boat)
+    # end
 
   def create
     @booking = Booking.new(booking_params)
@@ -16,7 +13,7 @@ class BookingsController < ApplicationController
       alert.now
       redirect_to boat_path(@booking.boat), alert: "You can't book your own boat!"
     else
-      render :new
+      render "boats/show"
     end
   end
 

@@ -11,7 +11,17 @@
         <p>Day price: <%= @boat.day_price %>€</p>
         <p><%= image_tag @boat.owner.user_pic_url, class: "avatar-large card-avatar" %></p>
         <p>Owner email: <%= @boat.owner.email %></p>
-        <%= link_to "Book this boat", new_boat_booking_path(@boat), class: "btn btn-success" %>
+
+        <%= simple_form_for [@boat, @booking] do |f| %>
+        <div>
+          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker", id: "range_start"} %>
+        </div>
+        <div>
+          <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker", id: "range_end"}  %>
+         </div>
+          <%= f.submit "Add new booking", class: "btn btn-success" %>
+        <% end %>
+
       </div>
 
     <% elsif current_user.id == @boat.owner_id %>
