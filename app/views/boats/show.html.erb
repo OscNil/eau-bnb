@@ -9,7 +9,7 @@
         <p>About: <%= @boat.description %></p>
         <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
         <p>Day price: <%= @boat.day_price %>€</p>
-        <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
+        <p><%= image_tag @boat.owner.user_pic_url, class: "avatar-large card-avatar" %></p>
         <p>Owner email: <%= @boat.owner.email %></p>
         <%= link_to "Book this boat", new_boat_booking_path(@boat), class: "btn btn-success" %>
       </div>
@@ -20,7 +20,7 @@
         <p>About: <%= @boat.description %></p>
         <p>Number of bunks: <%= @boat.nbr_beds %> &nbsp <i class="fas fa-bed"></i></p>
         <p>Day price: <%= @boat.day_price %>€</p>
-        <p><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large card-avatar" %></p>
+        <p><%= image_tag @boat.owner.user_pic_url, class: "avatar-large card-avatar" %></p>
         <p>Owner email: <%= @boat.owner.email %></p>
         <p>This boat belongs to you!</p>
         <%= link_to "Sink the boat", boat_path(@boat), method: :delete, class: "btn btn-danger" %>

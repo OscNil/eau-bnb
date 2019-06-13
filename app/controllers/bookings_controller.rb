@@ -2,15 +2,19 @@ class BookingsController < ApplicationController
   def new
     @boat = Boat.find(params[:boat_id])
     @booking = Booking.new
+    if @boat.owner == current_user
+      flash[:notice] = "You can't book your own boat!."
+      redirect_to boat_path(@boat)
+    end
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.boat = Boat.find(params[:boat_id])
     @booking.consumer = current_user
-    @booking.save
     if @booking.save
-      redirect_to boat_path(@booking.boat)
+      alert.now
+      redirect_to boat_path(@booking.boat), alert: "You can't book your own boat!"
     else
       render :new
     end

@@ -1,8 +1,8 @@
 import "bootstrap";
+import "../plugins/flatpickr"
 
-$(document).ready(() => {
-  $('#mybanner').hide();
-  $('#my-bookings').click(()=>{
-    $('#mybanner').toggle();
-  });
+$('#mybanner').hide();
+$('#my-bookings').click(() => {
+  $('#mybanner').slideToggle("slow");
 });
+
